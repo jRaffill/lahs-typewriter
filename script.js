@@ -1,39 +1,38 @@
+import {posts, allTags} from "./posts.js";
+
 // banner typewriter effect
 function typeWriter(i, txt, id) {
   if (i < txt.length) {
     document.getElementById(id).innerHTML += txt.charAt(i);
     i++;
-    setTimeout(() => {typeWriter(i, txt, id);}, 100);
+    var speed = 100 + Math.floor(Math.random() * 50);
+    setTimeout(() => {typeWriter(i, txt, id);}, speed);
   }
 }
 typeWriter(0, "LAHS Typewriter", "banner-text");
 
-// hardcoded post for development
-// TODO: fix to dynamically load posts
-var posts = [{
-	"date": [2023, 9, 15],
-	"dateText": "Sept. 15, 2023",
-	"tags": ["news", "nonfiction"],
-	"author": "CWC staff",
-	"title": "We Have A Blog",
-	"url": "/intro.html",
-	"contentPreview": "More information coming soon!!"
-}]
-
+// get and display all posts
 var postsContainer = document.getElementById("posts");
 for (const i of posts) {
 	var postHTML = "";
 	// TODO: add link to author???
-	postHTML += "<a class=\"title\" href=\"" + i.url + "\">" + i.title + "</a> \
+
+	if (posts.indexOf(i) > 0) {postHTML += "<hr>"};
+
+	postHTML += "<h2> <a href=\"posts/" + i.url + "\">" + i.title + "</a> </h2> \
 				<p>" + i.dateText + " / by " + i.author + " / ";
+	
 	for (const tag of i.tags) {
-		// TODO: figure out how searching through tags should work
-		postHTML += "<a class=\"tag\"href=\"" + tag + ".html\">" + tag + "</a>";
+		postHTML += "<a class=\"tag\"href=\"tags/" + tag + ".html\">" + tag + "</a>";
 	}
 
 	postHTML += "</p> \
-				<p> " + i.contentPreview + "</p>"
-	postsContainer.innerHTML = postHTML;
+				<p> " + i.contentPreview + " </p> \
+				<p> <a href=\"posts/" + i.url + "\"> read more... </a> </p>"
+	postsContainer.innerHTML += postHTML;
 }
 
-console.log(postsContainer.innerHTML);
+var tagsContainer = document.getElementById("tags")
+for (const i of allTags) {
+	tagsContainer.innerHTML += "<a class=\"tag\" href=\"tags/" + i + ".html\">" + i + "</a>";
+}
