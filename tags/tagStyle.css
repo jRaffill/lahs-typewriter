@@ -19,15 +19,20 @@ h1 {
 	margin: 0;
 }
 
-#content {
-	display: flex;
-	margin: 4vh;
-	margin-left: 20vw;
+h2 {
+	font-size: 2em;
+	font-weight: normal;
 }
 
-#post-text {
+#content {
+	display: flex;
+	margin: 4vw;
+	margin-left: 8vw;
+}
+
+#posts {
 	margin-right: 10vw;
-	width: 45vw;
+	width: 60vw;
 }
 
 #tags {
