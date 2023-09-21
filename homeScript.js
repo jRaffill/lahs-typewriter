@@ -23,7 +23,7 @@ for (const i of posts) {
 				<p>" + i.dateText + " / by " + i.author + " / ";
 	
 	for (const tag of i.tags) {
-		postHTML += "<a class=\"tag\"href=\"tags/" + tag + ".html\">" + tag + "</a>";
+		postHTML += "<a class=\"tag\"href=\"tag.html?tag=" + tag + "\">" + tag + "</a>";
 	}
 
 	postHTML += "</p> \
@@ -33,6 +33,6 @@ for (const i of posts) {
 }
 
 var tagsContainer = document.getElementById("tags")
-for (const i of allTags) {
-	tagsContainer.innerHTML += "<a class=\"tag\" href=\"tags/" + i + ".html\">" + i + "</a>";
+for (const tag of allTags) {
+	tagsContainer.innerHTML += "<a class=\"tag\"href=\"tag.html?tag=" + tag + "\">" + tag + "</a>";
 }
