@@ -30,12 +30,18 @@ h1 {
 	width: 45vw;
 }
 
-#tags {
+#sidebar {
 	overflow: auto;
 	position: sticky;
 	top: 5vh;
 	width: 15vw;
-	height: 100px;
+	height: 200px;
+}
+
+
+#email {
+	width: 12vw;
+	font-family: monospace;
 }
 
 .tag {
@@ -49,6 +55,7 @@ h1 {
 	margin-right: 0.4vw;
 	margin-top: 0.15vw;
 	margin-bottom: 0.15vw;
+	background-color: white;
 }
 
 a {
@@ -56,8 +63,9 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
+a:hover, .tag:hover {
 	text-decoration: underline;
 	color: lightslategrey;
 	border-color: lightslategrey;
+	cursor: pointer;
 }
