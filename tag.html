@@ -16,10 +16,10 @@
 		<div id="posts"> </div>
 		<div id="sidebar"> 
 			<div id="tags"> <p> Search by tag: </p> </div>
-			<form id="form">
+			<form id="form" method="post" action="https://script.google.com/macros/s/AKfycbw8hzd4PCHSgVtXlCd2JwGyQE6it8qiMoY53aNIfoMX2RFKjdZTLq54RYPbixeHH0RmIA/exec">
 				<p> Sign up for our newsletter! </p>
-				<input id="email" type="email" placeholder="your@email.com" form="form">
-				<input class="tag" type="submit" value=">" form="form">
+				<input name="Email" id="email" type="email" placeholder="your@email.com" form="form">
+				<input class="tag" type="submit" id="subscribe" value=">" form="form">
 			</form>
 	</div>
 	<script type="module" src="tagScript.js"></script>
