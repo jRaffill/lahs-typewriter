@@ -78,3 +78,10 @@ a:hover, .tag:hover {
 	border-color: lightslategrey;
 	cursor: pointer;
 }
+
+.tag:disabled {
+	text-decoration: none;
+	color: lightslategrey;
+	border-color: lightslategrey;
+	cursor: default;
+}

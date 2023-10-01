@@ -14,8 +14,51 @@ form.addEventListener("submit", function(e) {
 	fetch(action, {method: "POST", body: data}).then((response) => {
 		console.log(response.text());
 		form.innerHTML = "<p> Thank you for subscribing to our newsletter! </p>";
-	}).catch(response => {
-		console.error(response.text());
-		form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again. </p>";
+	}).catch((e) => {
+		console.log(e);
+		form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again.</p>"
 	})
+})
+
+const comment = document.getElementById("comment");
+const commentName = document.getElementById("name");
+comment.addEventListener("submit", function(e) {
+	e.preventDefault();
+	document.getElementById("url").value = window.location.pathname;
+	if (!commentName.value) {
+		commentName.value = "Anonymous";
+	}
+	const data = new FormData(comment);
+	const action = e.target.action;
+	commentName.disabled = "true";
+	document.getElementById("commentText").disabled = "true";
+	document.getElementById("postComment").disabled = "true";
+	fetch(action, {method: "POST", body: data}).then((response) => {
+		console.log(response.text());
+		comment.innerHTML = "<p><em>Your comment is being processed. Check back soon!</em></p>"
+	}).catch ((e) => {
+		console.log(e);
+		comment.innerHTML = "<p>There was an error submitting your data. Please refresh the page and try again.</p>";
+	})
+});
+
+var storedComments = {};
+const comments = document.getElementById("comments");
+const getCommentAction = "https://script.google.com/macros/s/AKfycbzRjihFyyg94RuaXE4k05VAOetSpnv1QqvxB3l3nKptyMw60zK4-I3OhcgcSE21I84B/exec"
+fetch(getCommentAction, {method: "GET"}).then((response) => {
+	response.text().then((text) => {
+		document.getElementById("existingComments").innerHTML = "";
+		storedComments = JSON.parse(text);
+		storedComments.shift();
+		for (const com of storedComments) {
+			if (com.Url == window.location.pathname) {
+				var date = new Date (com.Date);
+				document.getElementById("existingComments").innerHTML += "<em> <u>" + com.Name + ", " + date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear() + ": </u> </em>" + 
+				" <p class=\"comment\"> " + com.Comment + "</p>";
+				console.log(com);
+			}
+		}
+	})
+}).catch((e) => {
+	console.log(e);
 })

@@ -45,8 +45,5 @@ form.addEventListener("submit", function(e) {
 	fetch(action, {method: "POST", body: data}).then((response) => {
 		console.log(response.text());
 		form.innerHTML = "<p> Thank you for subscribing to our newsletter! </p>";
-	}).catch(response => {
-		console.error(response.text());
-		form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again. </p>";
 	})
 })

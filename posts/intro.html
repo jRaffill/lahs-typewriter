@@ -39,13 +39,28 @@
 			<p>Nulla gravida pretium sagittis. Pellentesque at sem et augue tempor laoreet. Aliquam laoreet volutpat sagittis. Vivamus sit amet scelerisque orci, ut ullamcorper dolor. In scelerisque dapibus lobortis. Maecenas et enim ut leo gravida euismod. Sed elit leo, tempor nec tellus eget, vehicula egestas mi. Nulla fringilla rutrum quam quis tempus.</p>
 			<p>Etiam quis metus varius, convallis lectus consectetur, cursus turpis. Etiam aliquet, eros non tincidunt vehicula, neque sapien laoreet magna, et vulputate lacus nisi sit amet nibh. Ut eu ex enim. Cras et finibus nulla. Nunc sed gravida lectus. Nulla nibh nibh, venenatis ac convallis nec, facilisis in diam. Maecenas aliquam nulla eu varius sodales. Pellentesque lectus tellus, interdum in facilisis quis, vulputate quis tortor. Fusce interdum mi dui, in semper lectus molestie id. Curabitur dui urna, vulputate sit amet mauris nec, gravida sodales mi. Etiam non maximus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse efficitur finibus bibendum. Proin neque est, rutrum vitae imperdiet vel, sodales quis nunc.</p>
 			<p>Pellentesque sagittis in velit a tristique. Proin aliquet, justo vel maximus vulputate, nunc quam rhoncus ligula, vel ornare nisl sapien at enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse auctor mattis venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus et leo sed ex laoreet consectetur nec quis lectus. Fusce arcu arcu, accumsan et tellus vel, fringilla vehicula sapien. Nunc porttitor purus ut dui tristique auctor. Suspendisse semper finibus ipsum at euismod. Proin suscipit leo vitae justo rhoncus sollicitudin. Etiam libero ligula, dapibus quis massa in, luctus dictum leo. Donec vel elementum turpis. Morbi non congue lorem, at suscipit sapien. Maecenas sit amet fringilla est. </p>
+			<hr/>
+			<div id="comments">
+				<div id="existingComments">
+					<p><em>Loading comments...</em></p>
+				</div>
+				<form id="comment" action="https://script.google.com/macros/s/AKfycbzRjihFyyg94RuaXE4k05VAOetSpnv1QqvxB3l3nKptyMw60zK4-I3OhcgcSE21I84B/exec">
+					<p>What do you love about this piece of writing? Submit a comment to let us know!</p>
+					<input name="Name" id="name" type="text" placeholder="name (optional)" form="comment"> <br/>
+					<textarea name="Comment" cols="80" rows="5" id="commentText" placeholder="I loved..." form="comment"></textarea>
+					<input name="Url" id="url" type="text" hidden form="comment"> 
+					<input name="sheetName" type="text" value="Comments" hidden>
+					<input class="tag" type="submit" id="postComment" value="submit!" form="comment">
+				</form>
+			</div>
 		</div>
 		<!-- ... to here -->
 		<div id="sidebar">
 			<div id="tags"> <p> Search by tag: </p> </div>
-			<form id="form" method="post" action="https://script.google.com/macros/s/AKfycbw8hzd4PCHSgVtXlCd2JwGyQE6it8qiMoY53aNIfoMX2RFKjdZTLq54RYPbixeHH0RmIA/exec">
+			<form id="form" method="post" action="https://script.google.com/macros/s/AKfycbzRjihFyyg94RuaXE4k05VAOetSpnv1QqvxB3l3nKptyMw60zK4-I3OhcgcSE21I84B/exec">
 				<p> Sign up for our newsletter! </p>
 				<input name="Email" id="email" type="email" placeholder="your@email.com" form="form">
+				<input name="sheetName" id="sheetname" type="text" value="Newsletter" hidden>
 				<input class="tag" type="submit" id="subscribe" value=">" form="form">
 			</form>
 		</div>

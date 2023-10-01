@@ -38,10 +38,12 @@ h1 {
 	height: 200px;
 }
 
+input {
+	font-family: inherit;
+}
 
 #email {
 	width: 12vw;
-	font-family: monospace;
 }
 
 .tag {
@@ -68,4 +70,20 @@ a:hover, .tag:hover {
 	color: lightslategrey;
 	border-color: lightslategrey;
 	cursor: pointer;
+}
+
+.comment {
+	margin-left: 30px;
+}
+
+textarea {
+	resize: none;
+	margin-top: 10px;
+}
+
+.tag:disabled {
+	text-decoration: none;
+	color: lightslategrey;
+	border-color: lightslategrey;
+	cursor: default;
 }
