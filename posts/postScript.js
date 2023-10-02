@@ -12,11 +12,14 @@ form.addEventListener("submit", function(e) {
 	document.getElementById("email").disabled = "true";
 	const action = e.target.action;
 	fetch(action, {method: "POST", body: data}).then((response) => {
-		console.log(response.text());
-		form.innerHTML = "<p> Thank you for subscribing to our newsletter! </p>";
-	}).catch((e) => {
-		console.log(e);
-		form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again.</p>"
+		response.text().then((text) => {
+			console.log(text);
+			if (JSON.parse(text).result == "error") {
+				form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again.</p>"
+			} else {
+				form.innerHTML = "<p> Thank you for subscribing to our newsletter! </p>";
+			}
+		})
 	})
 })
 
@@ -34,11 +37,14 @@ comment.addEventListener("submit", function(e) {
 	document.getElementById("commentText").disabled = "true";
 	document.getElementById("postComment").disabled = "true";
 	fetch(action, {method: "POST", body: data}).then((response) => {
-		console.log(response.text());
-		comment.innerHTML = "<p><em>Your comment is being processed. Check back soon!</em></p>"
-	}).catch ((e) => {
-		console.log(e);
-		comment.innerHTML = "<p>There was an error submitting your data. Please refresh the page and try again.</p>";
+		response.text().then((text) => {
+			console.log(text);
+			if (JSON.parse(text).result == "error") {
+				form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again.</p>"
+			} else {
+				form.innerHTML = "<p><em>Your comment is being processed. Check back soon!</em></p>";
+			}
+		})
 	})
 });
 
