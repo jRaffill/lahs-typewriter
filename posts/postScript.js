@@ -40,9 +40,9 @@ comment.addEventListener("submit", function(e) {
 		response.text().then((text) => {
 			console.log(text);
 			if (JSON.parse(text).result == "error") {
-				form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again.</p>"
+				comment.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again.</p>"
 			} else {
-				form.innerHTML = "<p><em>Your comment is being processed. Check back soon!</em></p>";
+				comment.innerHTML = "<p><em>Your comment is being processed. Check back soon!</em></p>";
 			}
 		})
 	})
