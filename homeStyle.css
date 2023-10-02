@@ -1,27 +1,32 @@
 body, html {
-	font-family: monospace;
+	height: 100%;
 	margin: 0;
+	font-family: monospace;
 }
 
 #banner {
-/*	background-image: url("../assets/banner.jpg");*/
-	height: 50px;
-	margin: 2%;
+	background-image: url("assets/banner.jpg");
+	height: 100%;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	text-align: center;
 }
 
 h1 {
-	align-self: center;
 	font-weight: lighter;
+	font-size: 60px;
 	margin: 0;
 }
 
 h2 {
 	font-size: 2em;
 	font-weight: normal;
+}
+
+#banner-text {
+	position: absolute;
+	top: 80vh;
+	left: 60vw;
 }
 
 #content {
@@ -35,12 +40,17 @@ h2 {
 	width: 60vw;
 }
 
-#tags {
+#sidebar {
 	overflow: auto;
 	position: sticky;
 	top: 5vh;
 	width: 15vw;
-	height: 100px;
+	height: 250px;
+}
+
+#email {
+	width: 12vw;
+	font-family: monospace;
 }
 
 .tag {
@@ -54,6 +64,7 @@ h2 {
 	margin-right: 0.4vw;
 	margin-top: 0.15vw;
 	margin-bottom: 0.15vw;
+	background-color: white;
 }
 
 a {
@@ -61,8 +72,16 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
+a:hover, .tag:hover {
 	text-decoration: underline;
 	color: lightslategrey;
 	border-color: lightslategrey;
+	cursor: pointer;
+}
+
+.tag:disabled {
+	text-decoration: none;
+	color: lightslategrey;
+	border-color: lightslategrey;
+	cursor: default;
 }

@@ -28,4 +28,4 @@ export const posts = [
 	},
 ];
 
-export const allTags = ["news", "nonfiction", "writing-advice", "poetry"];
+export const allTags = ["news", "nonfiction", "writing-advice", "poetry", "comedy"];

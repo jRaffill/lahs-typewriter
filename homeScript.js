@@ -23,7 +23,7 @@ for (const i of posts) {
 				<p>" + i.dateText + " / by " + i.author + " / ";
 	
 	for (const tag of i.tags) {
-		postHTML += "<a class=\"tag\"href=\"tags/" + tag + ".html\">" + tag + "</a>";
+		postHTML += "<a class=\"tag\"href=\"tag.html?tag=" + tag + "\">" + tag + "</a>";
 	}
 
 	postHTML += "</p> \
@@ -33,6 +33,25 @@ for (const i of posts) {
 }
 
 var tagsContainer = document.getElementById("tags")
-for (const i of allTags) {
-	tagsContainer.innerHTML += "<a class=\"tag\" href=\"tags/" + i + ".html\">" + i + "</a>";
+for (const tag of allTags) {
+	tagsContainer.innerHTML += "<a class=\"tag\"href=\"tag.html?tag=" + tag + "\">" + tag + "</a>";
 }
+
+const form = document.getElementById("form");
+form.addEventListener("submit", function(e) {
+	e.preventDefault();
+	const data = new FormData(form);
+	document.getElementById("subscribe").disabled = "true";
+	document.getElementById("email").disabled = "true";
+	const action = e.target.action;
+	fetch(action, {method: "POST", body: data}).then((response) => {
+		response.text().then((text) => {
+			console.log(text);
+			if (JSON.parse(text).result == "error") {
+				form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again.</p>"
+			} else {
+				form.innerHTML = "<p> Thank you for subscribing to our newsletter! </p>";
+			}
+		})
+	})
+})

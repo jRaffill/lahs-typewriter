@@ -4,29 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Typewriter</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="homeStyle.css">
+	<link rel="stylesheet" href="tagStyle.css">
 </head>
 
 <body>
 	<div id="banner">
-		<h1 id="banner-text"> </h1>
+		<a id="home-link" href="../">LAHS Typewriter</a>
+		<h1 id="banner-text">All posts under <a id="currTag" class="tag" href=""></a></h1>
 	</div>
 	<div id="content">
-		<div id="posts">
-		</div>
-		<div id="sidebar">
-			<div id="tags">
-				<p> Search by tag: </p>
-			</div> <br/>
+		<div id="posts"> </div>
+		<div id="sidebar"> 
+			<div id="tags"> <p> Search by tag: </p> </div>
 			<form id="form" method="post" action="https://script.google.com/macros/s/AKfycbzRjihFyyg94RuaXE4k05VAOetSpnv1QqvxB3l3nKptyMw60zK4-I3OhcgcSE21I84B/exec">
 				<p> Sign up for our newsletter! </p>
 				<input name="Email" id="email" type="email" placeholder="your@email.com" form="form">
 				<input name="sheetName" id="sheetname" type="text" value="Newsletter" hidden>
 				<input class="tag" type="submit" id="subscribe" value=">" form="form">
 			</form>
-		</div>
 	</div>
-	<script type="module" src="homeScript.js"></script>
-	<script type="module" src="posts.js"></script>
+	<script type="module" src="tagScript.js"></script>
 </body>
 </html> 
