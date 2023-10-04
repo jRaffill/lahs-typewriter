@@ -12,7 +12,7 @@ function typeWriter(i, txt, id) {
 typeWriter(0, "LAHS Typewriter", "banner-text");
 
 // get and display all posts
-var postsContainer = document.getElementById("posts");
+/*var postsContainer = document.getElementById("posts");
 for (const i of posts) {
 	var postHTML = "";
 	// TODO: add link to author???
@@ -36,7 +36,7 @@ var tagsContainer = document.getElementById("tags")
 for (const tag of allTags) {
 	tagsContainer.innerHTML += "<a class=\"tag\"href=\"tag.html?tag=" + tag + "\">" + tag + "</a>";
 }
-
+*/
 const form = document.getElementById("form");
 form.addEventListener("submit", function(e) {
 	e.preventDefault();
@@ -48,9 +48,9 @@ form.addEventListener("submit", function(e) {
 		response.text().then((text) => {
 			console.log(text);
 			if (JSON.parse(text).result == "error") {
-				form.innerHTML = "<p> There was an error submitting your data. Please refresh the page and try again.</p>"
+				form.innerHTML = "<h2> there was an error submitting your data -- please refresh the page and try again.</h2>"
 			} else {
-				form.innerHTML = "<p> Thank you for subscribing to our newsletter! </p>";
+				form.innerHTML = "<h2> thank you for subscribing to our newsletter! </h2>";
 			}
 		})
 	})
