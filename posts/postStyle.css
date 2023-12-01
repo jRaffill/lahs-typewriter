@@ -23,6 +23,7 @@ h1 {
 	display: flex;
 	margin: 4vh;
 	margin-left: 20vw;
+	line-height: 1.5;
 }
 
 #post-text {

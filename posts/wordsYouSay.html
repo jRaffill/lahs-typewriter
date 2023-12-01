@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Typewriter</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="postStyle.css">
+</head>
+
+<body>
+	<div id="banner">
+		<a id="home-link" href="../">LAHS Typewriter</a>
+		<!-- change things from here ... -->
+		<h1 id="banner-text">The Words You Say</h1>
+	</div>
+	<p style="text-align: center;"> Oct. 8, 2023 / by Max Asmar, Freshman / 
+		<a class="tag" href="../tag.html?tag=poetry">poetry</a>
+	</p>
+	<div id="content">
+		<div id="post-text">
+			<p> The words you say to us impact our lives <br/>
+				The way we treat others, <br/>
+				The way we see the world.</p>
+			<p> Every word you say can burn like fire, <br/>
+				Hurt like a shot.
+			</p>
+			<p> They can instill paranoia. <br/>
+				Strip us of our joy. <br/>
+			</p>
+			<p> “You’ll never make it to my level” <br/>
+				“You’re the most annoying person I’ve ever met” <br/>
+			</p>
+			<p> But you couldn’t seem to care about the effects. </p>
+			<p> We stop smiling as much. <br/>
+				We stop raising our hands in class. <br/>
+				We become devoid of emotion. <br/>
+				We feel sick. <br/>
+			</p>
+			<p> </p>
+			<p>  Another uses his words to heal. </p>
+			<p> “Good work, you’ll get there eventually. I believe in you,” <br/>
+				“I want you to know that I’m here for you,” he tells us. <br/>
+			</p>
+			<p> His words lift us up. <br/> 
+				His words make us feel better about ourselves. <br/>
+				Like <b>we can.</b> <br/>
+			</p>
+			<p> The words he says to us impact our lives. <br/>
+				The way we treat others. <br/>
+				The way we see the world. <br/>
+				The words <b>he says.</b>
+			</p>
+			<hr/>
+			<div id="comments">
+				<div id="existingComments">
+					<p><em>Loading comments...</em></p>
+				</div>
+				<form id="comment" action="https://script.google.com/macros/s/AKfycbzRjihFyyg94RuaXE4k05VAOetSpnv1QqvxB3l3nKptyMw60zK4-I3OhcgcSE21I84B/exec">
+					<p>What do you love about this piece of writing? Submit a comment to let us know!</p>
+					<input name="Name" id="name" type="text" placeholder="name (optional)" form="comment"> <br/>
+					<textarea name="Comment" cols="80" rows="5" id="commentText" placeholder="I loved..." form="comment"></textarea>
+					<input name="Url" id="url" type="text" hidden form="comment"> 
+					<input name="sheetName" type="text" value="Comments" hidden>
+					<input class="tag" type="submit" id="postComment" value="submit!" form="comment">
+				</form>
+			</div>
+		</div>
+		<!-- ... to here -->
+		<div id="sidebar">
+			<div id="tags"> <p> Search by tag: </p> </div>
+			<form id="form" method="post" action="https://script.google.com/macros/s/AKfycbzRjihFyyg94RuaXE4k05VAOetSpnv1QqvxB3l3nKptyMw60zK4-I3OhcgcSE21I84B/exec">
+				<p> Sign up for our newsletter! </p>
+				<input name="Email" id="email" type="email" placeholder="your@email.com" form="form">
+				<input name="sheetName" id="sheetname" type="text" value="Newsletter" hidden>
+				<input class="tag" type="submit" id="subscribe" value=">" form="form">
+			</form>
+		</div>
+	</div>
+	<script type="module" src="postScript.js"></script>
+</body>
+</html> 

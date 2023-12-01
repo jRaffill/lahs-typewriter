@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Typewriter</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="postStyle.css">
+</head>
+
+<body>
+	<div id="banner">
+		<a id="home-link" href="../">LAHS Typewriter</a>
+		<!-- change things from here ... -->
+		<h1 id="banner-text">fruit tea</h1>
+	</div>
+	<p style="text-align: center;"> Nov. 28, 2023 / by Bridget Liu, Senior / 
+		<a class="tag" href="../tag.html?tag=short-story">essay</a>
+		<a class="tag" href="../tag.html?tag=personal">personal</a>
+	</p>
+	<div id="content">
+		<div id="post-text">
+			<div style="display: flex">
+				<div>
+					<b> A Recipe for Fruit Tea (Midnights Only) </b>
+					<ol> 
+						<li> Slice a few oranges, grapefruits, and apples apart. (No need to be kind, just roughhand a few finger-sized chunks). </li>
+						<li> Chuck these pieces (with seeds and peels still attached) into the tea kettle that sits on the rightmost side of the countertop in the kitchen, along with half a liter of water. </li>
+						<li> Press the worn buttons on the kettle until it sings its familiar tune. </li>
+					</ol>
+					<em> (Note: Please remember to actually pour out the tea in the morning so you don’t die from dehydration at school.) </em>
+				</div>
+				<div style="margin-left: 30px">
+					<img src="../assets/fruitTeaImage.jpg" style="width:140px">
+					<p style="font-size: 8px">The top beverage is a fusion of starbucks coffee and herbal tea… interesting taste to say the least. </p>
+				</div>
+			</div>
+			<div style="text-indent: 4em">
+			<p>I first learned to make fruit tea as a middle school student. My mother had just bought this grand contraption of a device—an “electric tea kettle,” apparently. It was innovative, all glass and stainless steel, with smoothed edges and round corners. My first sip of brewed grapefruit tea is carved into my brain vividly: a faint touch of bitterness incorporated into sweet splashes of citrus flavor. </p>
+			<p>As a child, I was sure of one thing. I would never drink juice. My family deeply disapproved of artificially sweetened beverages, like the “Tropicana Orange Delight” or “CapriSun” packs that commonly litter the floors of a middle school after lunch, but I also hated less concentrated drinks like green tea. Thus, I’ve always associated core memories like the last day of school or birthday parties with friends with fruit tea instead of fruit juice. </p>
+			<p> In fact, somewhere hidden inside a drawer or nightstand in my room lies a Polaroid where my friends are holding paper cups with Coke or Pepsi and I’m raising up my metal water bottle (it’s a relic now), filled with orange tea (of course). In that photo, we are forever eleven years old, with toothy grins and sunburned faces. We’re yelling at each other, each one of us holding a weapon of mass destruction: a pillow. As we scream and punch one another in the face with these nuclear weapons, we smile. If photos could be eaten, I think that Polaroid would be pure cane sugar. </p>
+			<p> As a sixteen year-old, I am confused. Instead of ice cream sandwiches during summer afternoons and pillow fights and sleepovers, thick textbooks and homework assignments that keep me up until midnight are imminent concerns. No longer do I stay up until 1 AM on Friday nights because my friend is gossiping and giggling in the dark about her new crush; I stay up past midnight now because of the future. On these lonely midnights, I make fruit tea. </p>
+			<p> The most common question that teachers used to ask us as elementary students was, “What do you want to be when you grow up?” <em> Doctor, lawyer, engineer, author, teacher.</em> During recent 1 AM sessions of fruit tea and existential crises, I always end up going back to this question. What happens in a year, then another year down the line, then ten, twenty, thirty? <em> I’m not sure. </em></p>
+			<p>In two more years, I will be an adult. Legally, I will be able to vote, enlist into the military, buy a house, and start an independent stock portfolio. At the same time, I have no idea what the fuck is going on. I used to want to be an author, then a marine biologist, and now a neurosurgeon. Still, I’m unsure. How can I commit to a decision so serious, something that quite literally determines my future? I don’t know how to leave that younger version of me, the one in the Polaroid photo smiling with her buck teeth at her friends, behind. I wonder what she would think of me right now. Would she even approve of my decisions? </p>
+			<p>	As someone in between childhood and adulthood, stuck in that dreaded stage of life known for the angsty goths it too often produces, I see fruit tea as a passage to both my past and future. In the midst of every single change that is happening, I still have an anchor to the eleven-year-old version of myself. I’m not sure who I will be in the future ten years from now or even just two, but I do know one thing. There will always be a small part of me that carries a worn-out Polaroid photo in her pocket.</p>
+			</div>
+			<hr/>
+			<div id="comments">
+				<div id="existingComments">
+					<p><em>Loading comments...</em></p>
+				</div>
+				<form id="comment" action="https://script.google.com/macros/s/AKfycbzRjihFyyg94RuaXE4k05VAOetSpnv1QqvxB3l3nKptyMw60zK4-I3OhcgcSE21I84B/exec">
+					<p>What do you love about this piece of writing? Submit a comment to let us know!</p>
+					<input name="Name" id="name" type="text" placeholder="name (optional)" form="comment"> <br/>
+					<textarea name="Comment" cols="80" rows="5" id="commentText" placeholder="I loved..." form="comment"></textarea>
+					<input name="Url" id="url" type="text" hidden form="comment"> 
+					<input name="sheetName" type="text" value="Comments" hidden>
+					<input class="tag" type="submit" id="postComment" value="submit!" form="comment">
+				</form>
+			</div>
+		</div>
+		<!-- ... to here -->
+		<div id="sidebar">
+			<div id="tags"> <p> Search by tag: </p> </div>
+			<form id="form" method="post" action="https://script.google.com/macros/s/AKfycbzRjihFyyg94RuaXE4k05VAOetSpnv1QqvxB3l3nKptyMw60zK4-I3OhcgcSE21I84B/exec">
+				<p> Sign up for our newsletter! </p>
+				<input name="Email" id="email" type="email" placeholder="your@email.com" form="form">
+				<input name="sheetName" id="sheetname" type="text" value="Newsletter" hidden>
+				<input class="tag" type="submit" id="subscribe" value=">" form="form">
+			</form>
+		</div>
+	</div>
+	<script type="module" src="postScript.js"></script>
+</body>
+</html> 
